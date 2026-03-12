@@ -1,0 +1,10 @@
+version: "3"
+services:
+  libretranslate:
+    image: libretranslate/libretranslate:latest
+    ports:
+      - "2000:5000"
+    environment:
+      - LT_LOAD_ONLY=en,es,fr,de,hi,ar,zh,pt,ja,ko
+      - LT_REQ_LIMIT=0
+    restart: unless-stopped
